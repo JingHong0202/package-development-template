@@ -1,7 +1,6 @@
 import { spawn } from 'node:child_process';
-import log from '../utils/logger';
+import log from '../utils/logger.mts';
 import inquirer from 'inquirer';
-import { space } from '../utils/reg';
 
 // console.log(process.argv)
 
@@ -21,11 +20,11 @@ execScript('npx', ['prettier', '--check', '.'])
         }
       })
       .catch(err => {
-        log.error(<string>err);
+        log.error(err as string);
       });
   })
   .catch(err => {
-    throw Error(<string>err);
+    throw Error(err as string);
   });
 
 function execScript(command: string, options: string[]): Promise<void> {
@@ -36,11 +35,11 @@ function execScript(command: string, options: string[]): Promise<void> {
     );
 
     child.stdout.on('data', (data: string) => {
-      log.primary(`${data}`.replace(space, ''), false);
+      log.primary(`${data}`.replace(/[\r\n]/g, ''), false);
     });
 
     child.stderr.on('data', (data: string) => {
-      log.warning(`${data}`.replace(space, ''), false);
+      log.warning(`${data}`.replace(/[\r\n]/g, ''), false);
     });
 
     child.on('close', code => {

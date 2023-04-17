@@ -4,12 +4,11 @@
   "description": "专门用于npm库开发模板",
   "main": "dist/index.js",
   "types": "./types",
-  "type": "module",
   "scripts": {
     "build:type": "tsc",
     "lint": "eslint . --fix",
     "test": "vitest run",
-    "format": "set NODE_OPTIONS='--experimental-json-modules' && ts-node --esm --experimentalSpecifierResolution  node ./scripts/format.ts",
+    "format": "set NODE_OPTIONS='--experimental-json-modules' && ts-node --esm ./scripts/format.mts",
     "prepare": "husky install"
   },
   "author": "jinghong",

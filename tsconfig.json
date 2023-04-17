@@ -7,6 +7,7 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
     "declarationDir": "types",
     "emitDeclarationOnly": true,
     "resolveJsonModule": true,
@@ -15,9 +16,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "removeComments": true
+    "removeComments": true,
+    "allowImportingTsExtensions": true
   },
-  "include": ["**ts", "**/**.ts"],
+  "include": ["**/*"],
   "exclude": ["node_modules", "*.config", "dist", "tests"],
   "typeAcquisition": {
     "enable": true
