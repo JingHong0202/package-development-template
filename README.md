@@ -1,6 +1,6 @@
 # package-development-template
 
-> 专用用于开发 npm 包开发的模板，一步到位，省去安装各种依赖的时间
+> 专用于开发 npm 包开发的模板，一步到位，省去安装各种依赖的时间
 
 ## dependencies
 
