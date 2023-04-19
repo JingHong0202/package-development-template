@@ -8,6 +8,7 @@ language: typeScript
 code format: prettier  
 code lint: eslint  
 test: vitest  
+compiler: tsup
 git hook: husky、lint-staged
 
 ## scripts
