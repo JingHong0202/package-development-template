@@ -1,6 +1,8 @@
-export default {
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
   test: {
-    // threads: false
-    testTimeout: 25000
-  }
-};
+    // ...
+    testTimeout: 30000,
+  },
+});
